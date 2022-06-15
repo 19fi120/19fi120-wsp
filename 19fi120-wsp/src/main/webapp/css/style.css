@@ -1,0 +1,105 @@
+@charset "UTF-8";
+
+/* --------------------------------
+ * base
+ * -------------------------------- */
+/* すべてのWebページに適用される */
+html {
+  font-size: 62.5%;
+  font-family: "Hiragino Kaku Gothic ProN",  Meiryo,  sans-serif;
+}
+/*レスポンシブデザイン*/
+html * {
+  box-sizing: border-box;
+}
+body {
+  margin: 0 0 0 0;
+  font-size: 1.2rem;
+}
+a:link, a:visited, a:hover, a:active {
+  text-decoration: none;
+  max-width: 100%;
+  opacity: 0.9;
+}
+.wrapper {
+	margin: 0 auto 0 auto;
+	max-width: 960px;
+}
+
+/* --------------------------------
+ * header
+ * -------------------------------- */
+.header {
+  width: 100%;
+}
+.logo {
+  text-align: center;
+  margin: 0 auto;
+  text-align: center;
+}
+.global-nav li{
+  /*横*/
+  display: inline;
+  list-style-type: none;
+  padding-right: 30px;
+}
+.global-nav .nav-item {
+  text-align: right;
+  display: inline-block;
+  margin: 0 10px;
+}
+
+/* --------------------------------
+ * wrapper
+ * -------------------------------- */
+.wrapper {
+  width: 970px;
+  margin: 30px auto 40px;
+}
+
+/* スマートフォン向けCSS */
+@media (max-width: 767px) {
+	/* 全体 - ナビゲーション */
+	.wrapper {
+		margin: 0 8px;
+	}
+	.logo {
+		margin: 30px 0;
+	}
+	.logo img {
+		width: 200px;
+	}
+	.nav {
+		background-color: #dfddda;
+	}
+	.nav li {
+		display: block;
+	}
+
+	/* menu.html - 横並び解除 */
+	.menu-item {
+		display: block;
+	}
+	.menu-photo {
+		margin-right: 0;
+		width: 100%;
+	}
+	.menu-text {
+		width: 100%;
+	}
+
+	/* contact.html - フォーム */
+	select {
+		width: 100%;
+	}
+	input[name="subject"] {
+		width: 100%;
+	}
+	textarea {
+		width: 100%;
+	}
+	input[type="submit"] {
+		margin: 20px 0;
+		width: 100%;
+	}
+}
